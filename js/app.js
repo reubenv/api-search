@@ -16,7 +16,7 @@ var processResults = function(data) {
             objectToInsert.name = person.name;
             objectToInsert.birth_year = person.birth_year;
             $resultsArray.push(objectToInsert)
-        });
+        }); // end each of data results
 
         $.each($resultsArray, function(index, person) {
             var gifUrl = "http://api.giphy.com/v1/gifs/search";
@@ -34,7 +34,7 @@ var processResults = function(data) {
                 albumHTML += '<span class="album-artist">' + person.birth_year + '</span>';
                 albumHTML += '</li>';
                 $albumDiv.append(albumHTML);
-            });
+            }); // end getJSON from the giphy search
         });
     };
 };
